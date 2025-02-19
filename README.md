@@ -1,1 +1,0 @@
-# ondevice_ai_study
