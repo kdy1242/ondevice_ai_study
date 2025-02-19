@@ -38,10 +38,9 @@ class MainActivity : AppCompatActivity() {
             val detector = FaceDetection.getClient(highAccuracyOpts)
             val image = InputImage.fromBitmap(bitmap!!, 0)
 
-            val result = detector.process(image)
-                .addOnSuccessListener { faces ->
-                    bitmap.apply { img.setImageBitmap(drawWithRectangle(faces)) }
-                }
+            detector.process(image).addOnSuccessListener { faces ->
+                bitmap.apply { img.setImageBitmap(drawWithRectangle(faces)) }
+            }
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
