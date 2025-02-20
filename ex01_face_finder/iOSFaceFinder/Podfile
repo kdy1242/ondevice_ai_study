@@ -1,0 +1,8 @@
+
+platform :ios, '10.0'
+
+target 'iOSFaceFinder' do
+    pod 'GoogleMLKit/FaceDetection'
+    pod 'GoogleMLKit/TextRecognition'
+end
+
